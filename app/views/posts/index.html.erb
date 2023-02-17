@@ -1,0 +1,11 @@
+<h1>Town Hall</h1>
+
+<% @posts.each do |post| %>
+  <div>
+    <div><%= "#{post.user.username}: " %></div>
+    <div><%= post.content %></div>
+  </div>
+  <div></div>
+<% end %>
+
+<%= link_to "Contribute", new_post_path %>
