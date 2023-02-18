@@ -1,11 +1,18 @@
 <h1>Town Hall</h1>
+<div>
+  <%= link_to "Log in", new_user_session_path, method: :get unless user_signed_in? %>
+  <%=" to reveal the speaker" unless user_signed_in? %>
+</div>
 
 <% @posts.each do |post| %>
   <div>
-    <div><%= "#{post.user.username}: " %></div>
-    <div><%= post.content %></div>
+    <div><%= "#{post.user.username}: " if user_signed_in? %></div>
+    <em>
+      <div><%= post.content %></div>
+    </em>
   </div>
-  <div></div>
 <% end %>
 
-<%= link_to "Contribute", new_post_path %>
+<%= link_to "Share thy tittle-tattle", new_post_path %>
+
+<%= button_to "logout", destroy_user_session_path, method: :delete if user_signed_in? %>  
