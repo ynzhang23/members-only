@@ -1,24 +1,13 @@
-# README
+# Small Town Gossips
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Live Preview
 
-Things you may want to cover:
+https://small-town-gossips.herokuapp.com/
 
-* Ruby version
+## Learning Outcomes
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Using Devise to set up user authentication
+- Authenticating user states via Devise' session cookies
+- Manipulating databases within Heroku remote repo
+- Practicing ERB and Rails form helper
+- Deeper understanding of MVC pattern
