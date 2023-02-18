@@ -4,6 +4,8 @@
   <%=" to reveal the speaker" unless user_signed_in? %>
 </div>
 
+<%= image_tag("angela.gif", :alt => "Angela talking about gossip culture back in her small home town") %>
+
 <% @posts.each do |post| %>
   <div>
     <div><%= "#{post.user.username}: " if user_signed_in? %></div>
