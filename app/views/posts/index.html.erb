@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag 'index', media: 'all', 'data-turbo-track': 'reload' %>
 
 <div class="container">
-  <%= image_tag("house", alt: "Description of the image", class: "house") %>  
+  <%= image_tag("house.gif", alt: "Description of the image", class: "house") %>  
   <h1>Town Hall</h1>
   <div>
     <%= link_to "Log in", new_user_session_path, method: :get unless user_signed_in? %>
