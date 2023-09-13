@@ -1,0 +1,96 @@
+/* Minimal Style with Purple Theme */
+
+body {
+  font-family: 'Roboto', sans-serif; /* Use the selected font and fallback to a generic sans-serif font */
+  background-color: beige;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+
+.house {
+  width: 200px;
+  align-self: flex-start;
+}
+
+h1 {
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+  color: #551a8b; /* Purple */
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.actions {
+  text-align: left;
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: #551a8b; /* Purple */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Optional: Style links within the form */
+a {
+  color: #551a8b; /* Purple */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.remember-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
