@@ -1,22 +1,27 @@
-<h1>Town Hall</h1>
-<div>
-  <%= link_to "Log in", new_user_session_path, method: :get unless user_signed_in? %>
-  <%=" to reveal the speaker" unless user_signed_in? %>
+<%= stylesheet_link_tag 'index', media: 'all', 'data-turbo-track': 'reload' %>
+
+<div class="container">
+  <%= image_tag("house", alt: "Description of the image", class: "house") %>  
+  <h1>Town Hall</h1>
+  <div>
+    <%= link_to "Log in", new_user_session_path, method: :get unless user_signed_in? %>
+    <%=" to reveal the speaker" unless user_signed_in? %>
+  </div>
+
+  <div class="scrollable-posts">
+    <% @posts.each do |post| %>
+      <div class="post">
+        <div class="username"><%= "#{post.user.username}:" if user_signed_in? %></div>
+        <em>
+          <div class="post-content"><%= post.content %></div>
+        </em>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= link_to "New Post", new_post_path, class: 'btn-3d' %>
+  </div>
+  
+  <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn-3d-grey' if user_signed_in? %>
 </div>
-
-<%= image_tag("angela.gif", :alt => "Angela talking about gossip culture back in her small home town") %>
-
-<div>
-  <% @posts.each do |post| %>
-    <div>
-      <div><%= "#{post.user.username}: " if user_signed_in? %></div>
-      <em>
-        <div><%= post.content %></div>
-      </em>
-    </div>
-  <% end %>
-</div>
-
-<div><%= link_to "Share thy tittle-tattle", new_post_path %></div>
-
-<%= button_to "logout", destroy_user_session_path, method: :delete if user_signed_in? %>  

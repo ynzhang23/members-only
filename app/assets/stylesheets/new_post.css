@@ -1,0 +1,70 @@
+ /* Style the container */
+ body {
+  font-family: 'Roboto', sans-serif; /* Use the selected font and fallback to a generic sans-serif font */
+  background-color: beige;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+
+/* Style the heading */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Style the login link */
+a.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Style post content */
+div > div > div {
+  margin-bottom: 10px;
+}
+
+/* Style the "Share" button */
+a.btn-success {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Style the logout button */
+button.btn-danger {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}

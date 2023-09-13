@@ -1,6 +1,21 @@
-<h1>New Gossip</h1>
-<%= form_with model: @post do |form| %>
-  <div><%= form.label :content, "Speak your facts: " %></div>
-  <div><%= form.text_field :content %></div>
-  <div><%= form.submit "Submit!" %></div>
-<% end %>
+<%= stylesheet_link_tag 'new_post', media: 'all', 'data-turbo-track': 'reload' %>
+
+<div class="container">
+  <%= image_tag("house", alt: "Description of the image", class: "house") %>  
+  <h1>
+    <a href="<%= root_path %>">Town Hall</a>
+  </h1>
+  <%= form_with model: @post do |form| %>
+    <div class="form">
+      <div class="label">
+        <div><%= form.label :content, "New Post: " %></div>
+      </div>
+      <div class="text-field">
+        <div><%= form.text_field :content %></div>
+      </div>
+      <div class="submit">
+        <div><%= form.submit "Submit!" %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
