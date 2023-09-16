@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ .notice {
+  background-color: #4CAF50; /* Green background color for notice messages */
+  color: white; /* White text color for notice messages */
+  padding: 10px; /* Add some padding for spacing */
+  margin-top: 0px;
+}
+
+.alert {
+  background-color: #F44336; /* Red background color for alert messages */
+  color: white; /* White text color for alert messages */
+  padding: 10px; /* Add some padding for spacing */
+  margin-top: 0px;
+}
